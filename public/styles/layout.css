@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  margin-right: 10px;
+}
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {
+  padding: 15px;
+  color: #fff;
+}
+.navbar-mainbg {
+  background-color: #41A67E;
+  padding: 0px;
+}
+#navbarSupportedContent {
+  overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbarSupportedContent ul {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbarSupportedContent ul li a i {
+  margin-right: 10px;
+}
+#navbarSupportedContent li {
+  list-style-type: none;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+#navbarSupportedContent ul li a {
+  color: #E5C95F;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 20px 20px;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+
+/* keep navbar contents centered */
+#navbarSupportedContent {
+  overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbarSupportedContent ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* nested dropdown (submenu) styling */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+/* make submenu behave better on small screens: stack inside parent */
+@media (max-width: 991px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+/* ensure dropdown displays above other content */
+.dropdown-menu {
+  z-index: 2000;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #41A67E;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #E5C95F;
+}
+
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: #E5C95F;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+  color: #E5C95F;
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: #E5C95F;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+  color: #E5C95F;
+}
+p {
+  color: #E5C95F;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.copyright {
+  color: #E5C95F;
+}
+
+/*wave and animation*/
+footer .wave {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* add to your /styles/layout.css */
+.fas.fa-bars { color: #E5C95F !important; }
+
+/* top title image: show only on md+ (large screens), hide on small screens */
+.navbar-top {
+  display: none; /* keep hidden by default on small screens */
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* center contents */
+}
+
+.navbar-top-logo {
+  display: inline-block;
+  width: 55% !important;   /* override any inline width */
+  max-width: none;
+  max-height: 340px;        /* as requested */
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+/* show the full-width image on medium and larger viewports */
+@media (min-width: 768px) {
+  .navbar-top {
+    display: block;
+  }
+  /* optional spacing so it doesn't overlap navbar */
+  .navbar-mainbg { padding-top: 0; }
+}
+
+/* ensure hidden on very small screens */
+@media (max-width: 767.98px) {
+  .navbar-top { display: none !important; }
+}
+
+/* section layout: two equal columns, picture on right, responsive */
+section {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2%;
+}
+
+.main-topic {
+  width: 100%;
+  min-height: calc(100vh - 140px); /* header+footer adjustment */
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem auto;            /* center horizontally and add vertical spacing */
+  max-width: 85%;           /* constrain width so it appears centered on large screens */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* soft shadow */
+  border-radius: 20px;
+  background: rgba(255,255,255,0.02); /* subtle card background (optional) */
+}
+
+.onlytext {
+  width: 100%;
+  min-height: calc(100vh - 140px); /* header+footer adjustment */
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem auto;            /* center horizontally and add vertical spacing */
+  max-width: 85%;           /* constrain width so it appears centered on large screens */
+  box-shadow: 0 30px 30px rgba(0,0,0,0.15); /* soft shadow */
+  border-radius: 20px;
+  background: rgba(255,255,255,0.02); /* subtle card background (optional) */
+  float: none !important;
+}
+
+/* ensure any internal column helpers do not apply inside onlytext */
+.onlytext > * {
+  width: 100% !important;
+  display: block !important;
+  
+}
+.left-text,
+.right-picture {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.right-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.right-picture img {
+  width: 60%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+.right-picture:not(.nohover):hover {
+  transform: scale(1.5);
+}
+
+/* .floater { float: right; max-width: 220px; height: auto; margin-left: 1rem; } */
+
+/* stack on small screens */
+@media (max-width: 768px) {
+  .main-topic {
+    flex-direction: column;
+    min-height: auto;
+    margin: 1rem auto;   /* center horizontally and match .onlytext */
+    padding: 1rem;       /* reduce padding for narrow viewports */
+    max-width: 85%;      /* align width with .onlytext */
+    }
+  .left-text, .right-picture {
+    width: 100%;
+  }
+  .right-picture img { max-height: 40vh; }
+}
+/* prevent floats from changing section height */
+.main-topic::after { content: ""; display: table; clear: both; }
+
+/* navbar collapse: default (hidden on small screens), layout applied from md up */
+#navbarSupportedContent {
+ overflow: visible;
+  position: relative;
+}
+
+/* apply flex centering only on md (>=768px) and up so collapse works on small screens */
+@media (min-width: 768px) {
+  #navbarSupportedContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#navbarSupportedContent ul {
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+}
+
+/* Hide the hamburger icon and always show the full menu on small screens */
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* Ensure the collapsed menu is visible and stacked vertically */
+  .navbar-collapse {
+    display: block !important;
+  }
+
+  #navbarSupportedContent ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #navbarSupportedContent ul li {
+    display: block;
+    width: 100%;
+  }
+
+  #navbarSupportedContent ul li a {
+    padding: 12px 16px;
+    text-align: center;
+    display: block;
+  }
+
+  /* keep nested submenu behavior usable on small screens */
+  .dropdown-submenu > .dropdown-menu {
+    position: static;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+
+/* Fix: stack the three columns under "Einsatzmöglichkeiten" on small screens */
+@media (max-width: 768px) {
+  .main-topic .left-text > div {
+    float: none !important;      /* override inline float */
+    width: 100% !important;      /* override inline width */
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .main-topic {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .main-topic .right-picture {
+    width: 100% !important;
+    order: 2;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .main-topic .right-picture img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Split image into quadrants */
+
+.split-image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.quadrant {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  /* background-image: url("https://picsum.photos/300/300"); */
+  background-size: 300px 300px;
+  transition: transform 0.3s ease;
+}
+
+.quadrant-1 {
+  top: -10px;
+  left: -10px;
+  background-position: top left;
+}
+
+.quadrant-2 {
+  top: -10px;
+  right: -10px;
+  background-position: top right;
+}
+
+.quadrant-3 {
+  bottom: -10px;
+  left: -10px;
+  background-position: bottom left;
+}
+
+.quadrant-4 {
+  bottom: -10px;
+  right: -10px;
+  background-position: bottom right;
+}
+
+.split-image-container:hover .quadrant-1 {
+  transform: translate(10px, 10px);
+  
+}
+
+.split-image-container:hover .quadrant-2 {
+  transform: translate(-10px, 10px);
+}
+
+.split-image-container:hover .quadrant-3 {
+  transform: translate(10px, -10px);
+}
+
+.split-image-container:hover .quadrant-4 {
+  transform: translate(-10px, -10px);
+}
+
+
+
+ul {
+  list-style-image: url('/grafik/g2.svg');
+  list-style-position: inside; /* place marker directly next to the text */
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul li::marker {
+font-size: 2em;
+}
+
+
+
+ul.dog > li::before{
+    content: "🐶🐴";
+}
+
+/* remove the background list-image only for lists with class "dog" */
+ul.dog {
+  list-style-image: none !important;
+  list-style-type: none !important; /* ensure no default marker shows */
+  padding-left: 0; /* keep alignment consistent */
+}
+
+/* full-width card containing four equal cards */
+.full-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin: 1.5rem 0;
+}
+
+/* row with four equal cards */
+.card-row {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* each card takes equal space */
+.card {
+  flex: 1 1 0;
+  min-width: 180px;
+  padding: 1rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* card heading and text */
+.card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+}
+.card p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* responsive: stack cards on small screens */
+@media (max-width: 767.98px) {
+  .card-row {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+/* Button style */
+/* a.butto.one:before, a.butto.one:after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	transition: all 0.3s ease;
+}
+a.butto.one:before{
+	top: -2.5%;
+	left: -1%;
+	border-top: 2px solid white;
+	border-left: 2px solid white;	
+}
+a.butto.one:after{
+	bottom: -2.5%;
+	right: -1%;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+}
+a.butto.one:hover:before, a.butto.one:hover:after{
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+} */
+
+/* responsive Google map wrapper */
+.map-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 ratio — adjust if you want different aspect */
+  margin: 0.75rem 0;
+}
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
