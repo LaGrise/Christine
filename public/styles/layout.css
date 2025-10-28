@@ -512,6 +512,13 @@ ul.dog {
   padding-left: 0; /* keep alignment consistent */
 }
 
+/* remove outside list marker for the nav list so the symbol can be placed inside the button */
+.main-topic .left-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 /* full-width card containing four equal cards */
 .full-card {
   width: 100%;
