@@ -18,6 +18,7 @@ main {
   text-align: center;
   padding: 5vmin;
   flex: 1 0 auto;
+  
 }
 
 h1 {
@@ -27,6 +28,21 @@ h1 {
 p {
   color: #41A67E;
   font-size: 1.2rem;
+}
+
+/* enable automatic hyphenation site-wide (requires correct html[lang] attribute) */
+html,
+body,
+p,
+li,
+h1,h2,h3,h4,h5,h6 {
+  -webkit-hyphens: auto;
+     -ms-hyphens: auto;
+         hyphens: auto;
+  word-break: normal;         /* avoid breaking words arbitrarily */
+  overflow-wrap: break-word;  /* fall back for long words/URLs */
+  hyphenate-limit-chars: 6 3 3; /* prefer not to hyphenate very short words (supported in some engines) */
+  -webkit-hyphenate-limit-chars: 6 3 3;
 }
 
 
